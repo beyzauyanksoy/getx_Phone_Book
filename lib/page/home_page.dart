@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
-import 'package:phone_book/page/model/contact_model.dart';
+import 'package:phone_book/model/contact_model.dart';
 
 import 'add_contact.dart';
-import 'controller/app_data.dart';
+import '../controller/app_data.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({super.key});
@@ -24,9 +24,9 @@ class HomePage extends StatelessWidget {
               itemBuilder: (context, index) {
                 ContactModel model = appData.contacts.value[index];
                 return Container(
-                  margin: EdgeInsets.only(bottom: 10),
+                  margin: const EdgeInsets.only(bottom: 10),
                   child: ListTile(
-                    leading: CircleAvatar(
+                    leading: const CircleAvatar(
                       child: Icon(Icons.person),
                     ),
                     title: Text(model.name),
@@ -35,7 +35,7 @@ class HomePage extends StatelessWidget {
                         onPressed: () {
                           appData.deleteContact(model);
                         },
-                        icon: Icon(
+                        icon: const Icon(
                           Icons.delete,
                           color: Colors.red,
                         )),

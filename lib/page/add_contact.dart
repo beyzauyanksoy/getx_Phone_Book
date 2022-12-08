@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:phone_book/page/model/contact_model.dart';
+import 'package:phone_book/model/contact_model.dart';
 
-import 'controller/app_data.dart';
+import '../controller/app_data.dart';
 
 class AddContactPage extends StatelessWidget {
   AddContactPage({Key? key}) : super(key: key);
@@ -16,11 +16,11 @@ class AddContactPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Add Contact"),
+        title: const Text("Add Contact"),
       ),
       body: Container(
         width: double.infinity,
-        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
         child: Column(
           children: [
             TextField(
@@ -30,7 +30,7 @@ class AddContactPage extends StatelessWidget {
                 hintText: "Enter your name",
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             TextField(

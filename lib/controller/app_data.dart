@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:phone_book/page/model/contact_model.dart';
+import 'package:phone_book/model/contact_model.dart';
 
 class AppData extends GetxController {
   var contacts = [].obs;
