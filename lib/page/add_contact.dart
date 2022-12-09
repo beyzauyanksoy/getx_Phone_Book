@@ -26,6 +26,7 @@ class AddContactPage extends StatelessWidget {
             TextField(
               controller: nameController,
               decoration: const InputDecoration(
+                prefixIcon: Icon(Icons.person),
                 border: OutlineInputBorder(),
                 hintText: "Enter your name",
               ),
@@ -37,6 +38,7 @@ class AddContactPage extends StatelessWidget {
               keyboardType: TextInputType.phone,
               controller: phoneController,
               decoration: const InputDecoration(
+                prefixIcon: Icon(Icons.call),
                 border: OutlineInputBorder(),
                 hintText: "Enter your mobile number",
               ),
@@ -47,6 +49,7 @@ class AddContactPage extends StatelessWidget {
             TextField(
               controller: mailController,
               decoration: const InputDecoration(
+                prefixIcon: Icon(Icons.mail),
                 border: OutlineInputBorder(),
                 hintText: "Enter your email",
               ),

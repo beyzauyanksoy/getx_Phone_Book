@@ -15,7 +15,16 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: Text("CONTACT INFORMATION"),
+      actions: [
+        Padding(
+          padding: const EdgeInsets.only(right: 20),
+          child: Image.asset("assets/people.png",width: 50,),
+        )
+      ],
+      ),
       body: Column(
+
         children: [
           Expanded(
               child: Obx(
@@ -44,17 +53,41 @@ class HomePage extends StatelessWidget {
               },
             ),
           )),
-          MaterialButton(
-            color: Colors.blue,
-            minWidth: 300,
-            onPressed: () {
-              Get.to(() => AddContactPage());
-            },
-            child: const Text(
-              "Add Contact ",
-              style: TextStyle(color: Colors.white),
+          // MaterialButton(
+          //   color: Colors.blue,
+          //   minWidth: 300,
+          //   onPressed: () {
+          //     Get.to(() => AddContactPage());
+          //   },
+          //   child: const Text(
+          //     "Add Contact ",
+          //     style: TextStyle(color: Colors.white),
+          //   ),
+          // ),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 5,right: 10,left: 10),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+               
+                FloatingActionButton(
+                  heroTag:"theme" ,
+                  child: Icon(Icons.change_circle),
+                  onPressed: () {
+                    appData.changeTheme();
+                // Get.changeTheme(Get.isDarkMode? ThemeData.light(): ThemeData.dark());
+
+                },),
+                FloatingActionButton(
+                  heroTag: "addperson",
+                  child: Icon(Icons.person_add),
+                  onPressed: () {
+                   Get.to(() => AddContactPage());
+
+                },),
+              ],
             ),
-          ),
+          )
         ],
       ),
     );
